@@ -1,4 +1,4 @@
-package com.norrisboat.core.data
+package com.norrisboat.core.data.local
 
 import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.Preferences
@@ -12,7 +12,7 @@ import kotlinx.serialization.json.Json
 interface PreferenceStore {
 
     suspend fun setWeather(weather: Weather)
-    val weather: Flow<Weather>
+    val weather: Flow<Weather?>
 
 }
 
@@ -29,8 +29,8 @@ class PreferenceStoreImpl(
         }
     }
 
-    override val weather: Flow<Weather> =
-        dataStore.data.map { Json.decodeFromString<Weather>(it[keyWeather] ?: "{}") }
+    override val weather: Flow<Weather?> =
+        dataStore.data.map { Json.decodeFromString<Weather?>(it[keyWeather] ?: "") }
 
 }
 
