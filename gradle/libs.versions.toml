@@ -18,6 +18,9 @@ serializationPlugin = "2.1.0"
 koin = "4.0.1-Beta1"
 ktor = "3.0.2"
 viewModel = "2.8.7"
+androidxTestCore = "1.6.1"
+coroutines = "1.9.0"
+turbine = "1.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -52,6 +55,12 @@ ktor-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor"
 ktor-android = { group = "io.ktor", name = "ktor-client-android", version.ref = "ktor" }
 ktor-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
 ktor-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+
+#Testing
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutines" }
+androidx-test-core = { group = "androidx.test", name = "core", version.ref = "androidxTestCore" }
+turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
