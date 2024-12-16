@@ -1,5 +1,8 @@
 package com.norrisboat.model.ui
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class Weather(
     val city: String,
     val temperature: Double,
