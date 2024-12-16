@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.norrisboat.model.test.model-mergeDebugAndroidTestResources-30:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "map": [
+                {
+                    "source": "/Users/norrisaboagye/.gradle/caches/8.9/transforms/60d816958addbd9ea89e64844ac75abf/transformed/material-1.12.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,191",
+                        "endColumns": "135,140",
+                        "endOffsets": "186,327"
+                    }
+                }
+            ]
+        }
+    ]
+}
