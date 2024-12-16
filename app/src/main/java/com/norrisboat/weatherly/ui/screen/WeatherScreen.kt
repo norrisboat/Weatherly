@@ -87,7 +87,7 @@ fun WeatherDisplayScreen(modifier: Modifier = Modifier) {
 
                     WeatherUiState.Empty -> {
                         keyboardController?.hide()
-                        NoCityView()
+                        NoCityView(modifier = Modifier.fillMaxSize(fraction = 0.7f))
                     }
 
                     WeatherUiState.Loading -> {
