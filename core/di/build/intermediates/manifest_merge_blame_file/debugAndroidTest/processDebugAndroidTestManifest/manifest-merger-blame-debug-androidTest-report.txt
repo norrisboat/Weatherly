@@ -3,24 +3,24 @@
 3    package="com.norrisboat.core.di.test" >
 4
 5    <uses-sdk
-5-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest15591781533143585128.xml:5:5-74
+5-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest8933469958135002574.xml:5:5-74
 6        android:minSdkVersion="24"
-6-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest15591781533143585128.xml:5:15-41
+6-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest8933469958135002574.xml:5:15-41
 7        android:targetSdkVersion="24" />
-7-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest15591781533143585128.xml:5:42-71
+7-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest8933469958135002574.xml:5:42-71
 8
 9    <instrumentation
-9-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest15591781533143585128.xml:11:5-15:77
+9-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest8933469958135002574.xml:11:5-15:77
 10        android:name="androidx.test.runner.AndroidJUnitRunner"
-10-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest15591781533143585128.xml:11:22-76
+10-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest8933469958135002574.xml:11:22-76
 11        android:functionalTest="false"
-11-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest15591781533143585128.xml:14:22-52
+11-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest8933469958135002574.xml:14:22-52
 12        android:handleProfiling="false"
-12-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest15591781533143585128.xml:13:22-53
+12-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest8933469958135002574.xml:13:22-53
 13        android:label="Tests for com.norrisboat.core.di.test"
-13-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest15591781533143585128.xml:15:22-75
+13-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest8933469958135002574.xml:15:22-75
 14        android:targetPackage="com.norrisboat.core.di.test" />
-14-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest15591781533143585128.xml:12:22-73
+14-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest8933469958135002574.xml:12:22-73
 15
 16    <queries>
 16-->[androidx.test:runner:1.6.1] /Users/norrisaboagye/.gradle/caches/8.9/transforms/c85aebd56c1133727bbd55a056b1d6ef/transformed/runner-1.6.1/AndroidManifest.xml:24:5-28:15
@@ -51,14 +51,14 @@
 28-->[androidx.core:core:1.15.0] /Users/norrisaboagye/.gradle/caches/8.9/transforms/0cbd299abc2f9b1818eb5d856f017a52/transformed/core-1.15.0/AndroidManifest.xml:26:22-94
 29
 30    <application
-30-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest15591781533143585128.xml:7:5-9:19
+30-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest8933469958135002574.xml:7:5-9:19
 31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 31-->[androidx.core:core:1.15.0] /Users/norrisaboagye/.gradle/caches/8.9/transforms/0cbd299abc2f9b1818eb5d856f017a52/transformed/core-1.15.0/AndroidManifest.xml:28:18-86
 32        android:debuggable="true"
 33        android:extractNativeLibs="false" >
 34        <uses-library android:name="android.test.runner" />
-34-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest15591781533143585128.xml:8:9-60
-34-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest15591781533143585128.xml:8:23-57
+34-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest8933469958135002574.xml:8:9-60
+34-->/Users/norrisaboagye/Documents/Workspace/Personal/Compose/Weatherly/core/di/build/intermediates/tmp/manifest/androidTest/debug/tempFile1ProcessTestManifest8933469958135002574.xml:8:23-57
 35
 36        <activity
 36-->[androidx.test:core:1.6.1] /Users/norrisaboagye/.gradle/caches/8.9/transforms/2df8ad6ae288edfcc0ba09fb9566b543/transformed/core-1.6.1/AndroidManifest.xml:27:9-34:20

@@ -1,0 +1,5 @@
+<resources>
+    <string name="no_city_selected">No City Selected</string>
+    <string name="search_for_city">Please Search For A City</string>
+    <string name="search_hint">Search Location</string>
+</resources>
