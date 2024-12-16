@@ -25,7 +25,10 @@ fun NoCityView(modifier: Modifier = Modifier) {
             .fillMaxWidth()
             .padding(MaterialTheme.dimens.extraLarge),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(MaterialTheme.dimens.default)
+        verticalArrangement = Arrangement.spacedBy(
+            MaterialTheme.dimens.default,
+            Alignment.CenterVertically
+        )
     ) {
         Text(
             text = stringResource(R.string.no_city_selected),
