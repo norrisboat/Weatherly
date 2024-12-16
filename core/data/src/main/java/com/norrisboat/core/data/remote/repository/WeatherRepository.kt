@@ -12,7 +12,7 @@ import org.koin.core.component.inject
 interface WeatherRepository {
     suspend fun fetchWeatherByCity(city: String): Result<WeatherResponse>
     suspend fun saveWeather(weather: Weather)
-    suspend fun getWeather(): Flow<Weather>
+    suspend fun getWeather(): Flow<Weather?>
 }
 
 class WeatherRepositoryImpl : KoinComponent, WeatherRepository {
@@ -29,7 +29,7 @@ class WeatherRepositoryImpl : KoinComponent, WeatherRepository {
         preferenceStore.setWeather(weather)
     }
 
-    override suspend fun getWeather(): Flow<Weather> {
+    override suspend fun getWeather(): Flow<Weather?> {
         return preferenceStore.weather
     }
 

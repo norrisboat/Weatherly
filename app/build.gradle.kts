@@ -41,9 +41,11 @@ android {
 
 dependencies {
 
+    implementation(project(":core:data"))
     implementation(project(":core:di"))
     implementation(project(":core:designsystem"))
     implementation(project(":ui"))
+    implementation(project(":model"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

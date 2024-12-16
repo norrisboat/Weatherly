@@ -15,7 +15,7 @@ data class Dimens(
     val large: Dp = 12.dp,
     val extraLarge: Dp = 16.dp,
     val superLarge: Dp = 24.dp,
-    val huge: Dp = 56.dp
+    val huge: Dp = 64.dp
 )
 
 val LocalSpacing = compositionLocalOf { Dimens() }

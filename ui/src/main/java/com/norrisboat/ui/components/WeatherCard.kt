@@ -2,6 +2,7 @@ package com.norrisboat.ui.components
 
 import ItemBackgroundColor
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -24,11 +25,12 @@ import com.norrisboat.model.ui.Weather
 import com.norrisboat.ui.utils.DevicePreviews
 
 @Composable
-fun WeatherCard(modifier: Modifier = Modifier, weather: Weather) {
+fun WeatherCard(modifier: Modifier = Modifier, weather: Weather, onWeatherSelected: () -> Unit) {
     Row(
         modifier = modifier
             .fillMaxWidth()
             .background(ItemBackgroundColor, MaterialTheme.shapes.large)
+            .clickable { onWeatherSelected() }
             .padding(MaterialTheme.dimens.superLarge),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -50,7 +52,7 @@ fun WeatherCard(modifier: Modifier = Modifier, weather: Weather) {
         AsyncImage(
             model = weather.icon,
             contentDescription = "Humidity Icon",
-            modifier = Modifier.width(64.dp)
+            modifier = Modifier.width(86.dp)
         )
     }
 }
@@ -60,7 +62,7 @@ fun WeatherCard(modifier: Modifier = Modifier, weather: Weather) {
 fun WeatherCardPreview() {
     WeatherlyTheme {
         Box(modifier = Modifier.background(MaterialTheme.colorScheme.background)) {
-            WeatherCard(weather = Weather.sample)
+            WeatherCard(weather = Weather.sample) {}
         }
     }
 }

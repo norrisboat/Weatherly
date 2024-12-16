@@ -30,7 +30,13 @@ class PreferenceStoreImpl(
     }
 
     override val weather: Flow<Weather?> =
-        dataStore.data.map { Json.decodeFromString<Weather?>(it[keyWeather] ?: "") }
+        dataStore.data.map {
+            try {
+                Json.decodeFromString<Weather?>(it[keyWeather] ?: "{}")
+            } catch (e: Exception) {
+                null
+            }
+        }
 
 }
 

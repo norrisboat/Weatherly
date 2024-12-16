@@ -8,7 +8,6 @@ import com.norrisboat.core.data.remote.usecase.SavedWeatherResultUseCase
 import com.norrisboat.model.ui.Weather
 import com.norrisboat.model.ui.WeatherUiState
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -28,29 +27,33 @@ class WeatherViewModel : KoinComponent, ViewModel() {
     private val savedWeatherResultUseCase: SavedWeatherResultUseCase by inject()
     private val getSavedWeatherResultUseCase: GetSavedWeatherResultUseCase by inject()
 
-    private val _uiState = MutableStateFlow<WeatherUiState>(WeatherUiState.Empty)
+    private val _uiState = MutableStateFlow<WeatherUiState>(WeatherUiState.Idle)
     val uiState: StateFlow<WeatherUiState> = _uiState.stateIn(
         viewModelScope,
         SharingStarted.WhileSubscribed(5000L),
-        WeatherUiState.Empty
+        WeatherUiState.Idle
     )
     private val _search = MutableStateFlow("")
+    val search: StateFlow<String> = _search.stateIn(
+        viewModelScope,
+        SharingStarted.WhileSubscribed(5000L),
+        ""
+    )
 
     init {
         observeSavedWeather()
 
         viewModelScope.launch {
-            _search.debounce(300L)
+            _search.debounce(600L)
                 .collectLatest { city ->
-                fetchWeather(city)
-            }
+                    fetchWeather(city)
+                }
         }
     }
 
     private fun observeSavedWeather() {
         viewModelScope.launch {
             getSavedWeatherResultUseCase.run(Unit)
-                .onStart { _uiState.update { WeatherUiState.Loading } }
                 .collectLatest { weather ->
                     if (weather == null) {
                         _uiState.update { WeatherUiState.Empty }
@@ -62,7 +65,12 @@ class WeatherViewModel : KoinComponent, ViewModel() {
     }
 
     private fun fetchWeather(city: String) {
+        if (city.isEmpty()) {
+            observeSavedWeather()
+            return
+        }
         viewModelScope.launch(Dispatchers.IO) {
+            _uiState.update { WeatherUiState.Loading }
             val result = fetchWeatherResultUseCase.run(city)
             result.fold(
                 onSuccess = { weather ->
@@ -77,6 +85,7 @@ class WeatherViewModel : KoinComponent, ViewModel() {
 
     fun selectWeather(weather: Weather) {
         viewModelScope.launch(Dispatchers.IO) {
+            updateSearch("")
             savedWeatherResultUseCase.run(weather)
         }
     }

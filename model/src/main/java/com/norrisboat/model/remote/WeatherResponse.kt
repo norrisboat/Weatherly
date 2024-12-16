@@ -34,7 +34,7 @@ data class Condition(
 
 fun WeatherResponse.toDomainModel() = Weather(
     city = location.name,
-    icon = current.condition.icon,
+    icon = "https:${current.condition.icon.replace("64x64", "128x128")}",
     condition = current.condition.text,
     humidity = current.humidity,
     feelsLike = current.feelsLike,

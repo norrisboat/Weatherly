@@ -12,7 +12,6 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -23,6 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -46,13 +46,14 @@ fun WeatherView(modifier: Modifier = Modifier, weather: Weather) {
         AsyncImage(
             model = weather.icon,
             contentDescription = "Weather Icon",
-            modifier = Modifier
-                .width(120.dp)
-                .padding(MaterialTheme.dimens.default),
+            modifier = Modifier.width(120.dp),
             contentScale = ContentScale.Fit
         )
 
-        Row(horizontalArrangement = Arrangement.spacedBy(MaterialTheme.dimens.large)) {
+        Row(
+            horizontalArrangement = Arrangement.spacedBy(MaterialTheme.dimens.large),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
             Text(
                 text = weather.city,
                 fontSize = 24.sp,
@@ -77,15 +78,21 @@ fun WeatherView(modifier: Modifier = Modifier, weather: Weather) {
                     color = ItemBackgroundColor,
                     shape = MaterialTheme.shapes.large
                 )
-                .padding(
-                    vertical = MaterialTheme.dimens.superLarge,
-                    horizontal = MaterialTheme.dimens.extraLarge
-                ),
+                .padding(MaterialTheme.dimens.superLarge),
             horizontalArrangement = Arrangement.spacedBy(MaterialTheme.dimens.huge)
         ) {
-            WeatherDetailItem(label = "Humidity", value = "${weather.humidity}%")
-            WeatherDetailItem(label = "UV", value = weather.uvIndex.toString())
-            WeatherDetailItem(label = "Feels Like", value = "${weather.feelsLike.toInt()}°")
+            WeatherDetailItem(
+                label = stringResource(R.string.humidity),
+                value = "${weather.humidity}%"
+            )
+            WeatherDetailItem(
+                label = stringResource(R.string.uv),
+                value = weather.uvIndex.toInt().toString()
+            )
+            WeatherDetailItem(
+                label = stringResource(R.string.feels_like),
+                value = "${weather.feelsLike.toInt()}°"
+            )
         }
     }
 }
@@ -95,14 +102,13 @@ fun WeatherDetailItem(label: String, value: String) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         Text(
             text = label,
-            fontSize = 12.sp,
-            color = ItemTitleColor,
-            fontWeight = FontWeight.Light
+            fontSize = 14.sp,
+            color = ItemTitleColor
         )
         Spacer(modifier = Modifier.height(4.dp))
         Text(
             text = value,
-            fontSize = 14.sp,
+            fontSize = 18.sp,
             color = ItemColor,
             fontWeight = FontWeight.Medium
         )
