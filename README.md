@@ -1,8 +1,9 @@
 
 # Weatherly 🌦️
-**Weatherly** is a modern and user-friendly weather app for Android, built with **Jetpack Compose**. It allows users to search for and view real-time weather information, including temperature, humidity, UV index, and "feels like" temperature. Designed with clean architecture and best practices, it delivers a smooth and engaging experience.
-[![Kotlin](https://img.shields.io/badge/Kotlin-2.1.0-blue.svg?style=flat&logo=kotlin)](https://kotlinlang.org)
+Weatherly is a modern and user-friendly weather app for Android, built with **Jetpack Compose**. It allows users to search for and view real-time weather information, including temperature, humidity, UV index, and "feels like" temperature. Designed with clean architecture and best practices, it delivers a smooth and engaging experience.
 ---
+
+[![Kotlin](https://img.shields.io/badge/Kotlin-2.1.0-blue.svg?style=flat&logo=kotlin)](https://kotlinlang.org)
 
 ## Table of Contents
 
